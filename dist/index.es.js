@@ -1237,7 +1237,13 @@ var createFileFromUrl = function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return fetch(url);
+            return fetch(url, {
+              mode: 'cors',
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': '*'
+              }
+            });
 
           case 2:
             response = _context.sent;
@@ -1249,7 +1255,7 @@ var createFileFromUrl = function () {
             metadata = { type: data.type };
             filename = url.replace(/\?.+/, '').split('/').pop();
             ext = data.type.split('/').pop();
-            return _context.abrupt('return', new File([data], filename + '.' + ext, metadata));
+            return _context.abrupt('return', new File([data], filename + '.' + ext));
 
           case 10:
           case 'end':
