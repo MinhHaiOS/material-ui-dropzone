@@ -20,11 +20,11 @@ export function convertBytesToMbsOrKbs(filesize){
 
 export async function createFileFromUrl (url) {
   const response = await fetch(url, {
-    mode: 'cors',
+    mode: 'no-cors',
     headers: {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': '*',
-    }
+
+    },
   });
   const data = await response.blob();
   const metadata = { type: data.type };

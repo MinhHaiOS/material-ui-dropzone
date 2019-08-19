@@ -1238,11 +1238,7 @@ var createFileFromUrl = function () {
           case 0:
             _context.next = 2;
             return fetch(url, {
-              mode: 'cors',
-              headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': '*'
-              }
+              mode: 'no-cors'
             });
 
           case 2:

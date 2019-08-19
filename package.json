@@ -1,6 +1,6 @@
 {
   "name": "material-ui-dropzone-mh",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "description": "A Material-UI file-upload dropzone",
   "module": "dist/index.es.js",
